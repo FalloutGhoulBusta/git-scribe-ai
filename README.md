@@ -48,7 +48,7 @@ A VS Code extension that generates commit messages using Gemini AI.
 2. **Configure the extension:**
    - Open VS Code Settings (`Ctrl+,`)
    - Search for "Commit Message Generator"
-   - Paste your key into the **Gemini Api Key** field.
+   - Paste your key into the **Gemini API Key** field.
    - Optionally, change **Your Name** to customize the button text.
 
 ## Usage
@@ -98,7 +98,7 @@ To modify the extension:
 
 **API key issues:**
 - Verify your API key is correct
-- Check your Google AI account status and ensure the API is enabled.
+  - Check your Google AI account status and ensure the API is enabled.
 - Ensure you have internet connection
 
 **No staged changes:**
