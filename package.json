@@ -1,0 +1,68 @@
+{
+  "name": "commit-message-generator",
+  "displayName": "AI Commit Message Generator",
+  "description": "Generate commit messages using Gemini AI",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onView:scm"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "commitGenerator.generateMessage",
+        "title": "Generate message with Gemini",
+        "icon": "$(sparkle)"
+      }
+    ],
+    "menus": {
+      "scm/title": [
+        {
+          "command": "commitGenerator.generateMessage",
+          "when": "scmProvider == git",
+          "group": "navigation"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Commit Message Generator",
+      "properties": {
+        "commitGenerator.geminiApiKey": {
+          "type": "string",
+          "default": "",
+          "description": "Your Google Gemini API Key.",
+          "scope": "machine-overridable"
+        },
+        "commitGenerator.yourName": {
+          "type": "string",
+          "default": "Gemini",
+          "description": "The name to display in the button (e.g., Gemini)."
+        },
+        "commitGenerator.maxDiffLength": {
+          "type": "number",
+          "default": 8000,
+          "description": "Maximum length of the diff to send to the AI model."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "16.x",
+    "@types/vscode": "^1.74.0",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1"
+  }
+}
