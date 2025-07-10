@@ -86,7 +86,7 @@ To modify the extension:
 
 1. Edit `src/extension.ts`
 2. Run `npm run compile` to build
-3. Press `F5` to test in Extension Development Host
+3. Press `Fd5` to test in Extension Development Host
 4. Make changes and reload the extension host window
 
 ## Troubleshooting
