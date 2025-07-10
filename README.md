@@ -1,6 +1,6 @@
 # AI Commit Message Generator
 
-A VS Code extension that generates commit messages using Claude AI, similar to the Cline feature you saw!
+A VS Code extension that generates commit messages using Gemini AI.
 
 ## Features
 
@@ -41,16 +41,15 @@ A VS Code extension that generates commit messages using Claude AI, similar to t
 
 ## Setup
 
-1. **Get your Anthropic API key:**
-   - Sign up at [Anthropic](https://console.anthropic.com/)
-   - Create an API key
-   - Copy the key
+1. **Get your Google Gemini API key:**
+   - Go to [Google AI Studio](https://aistudio.google.com/app/apikey).
+   - Click **Create API key** and copy the generated key.
 
 2. **Configure the extension:**
    - Open VS Code Settings (`Ctrl+,`)
    - Search for "Commit Message Generator"
-   - Set your API key in "Anthropic Api Key"
-   - Optionally, change "Your Name" to customize the button text
+   - Paste your key into the **Gemini Api Key** field.
+   - Optionally, change **Your Name** to customize the button text.
 
 ## Usage
 
@@ -63,11 +62,11 @@ A VS Code extension that generates commit messages using Claude AI, similar to t
 
 ## Configuration Options
 
-| Setting | Description | Default |
-|---------|-------------|---------|
-| `commitGenerator.anthropicApiKey` | Your Anthropic API key | "" |
-| `commitGenerator.yourName` | Name to display in the button | "Claude" |
-| `commitGenerator.maxDiffLength` | Maximum diff length to send to Claude | 8000 |
+| Setting                         | Description                                          | Default  |
+| ------------------------------- | ---------------------------------------------------- | -------- |
+| `commitGenerator.geminiApiKey`  | Your Google Gemini API Key.                          | ""       |
+| `commitGenerator.yourName`      | Name to display in the button.                       | "Gemini" |
+| `commitGenerator.maxDiffLength` | Maximum length of the diff to send to the AI model. | 8000     |
 
 ## File Structure
 
@@ -99,7 +98,7 @@ To modify the extension:
 
 **API key issues:**
 - Verify your API key is correct
-- Check your Anthropic account has credits
+- Check your Google AI account status and ensure the API is enabled.
 - Ensure you have internet connection
 
 **No staged changes:**
