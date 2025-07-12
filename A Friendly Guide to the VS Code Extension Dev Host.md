@@ -33,7 +33,7 @@ Once the new window is open, you can test your "AI Commit Message Generator" by 
 4.  Go to the **Source Control view** (the icon with three connected dots on the left).
 5.  Click your shiny **"Generate message with Gemini"** button!
 
-If everything works, you've successfully tested your extension!
+If everything works, you've successfully tested your extension! **Check that the generated message appears in the SCM input box and follows the Conventional Commit format (e.g., starts with `feat:`, `fix:`, etc.).**
 
 ## "I Changed My Code. How Do I See the Update?"
 

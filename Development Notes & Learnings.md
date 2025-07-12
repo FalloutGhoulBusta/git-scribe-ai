@@ -82,3 +82,12 @@ The core logic was migrated from the Claude API to the Gemini API.
 - **Defining Settings:** All user-facing settings (API Key, Model Choice, etc.) are defined in the `contributes.configuration.properties` section of `package.json`. Using `"type": "string"` with an `"enum"` creates a user-friendly dropdown menu.
 - **Accessing Settings:** In the code, we access these settings using `vscode.workspace.getConfiguration('commitGenerator').get('settingName')`.
 - **Finding Settings:** Users can find these settings by opening the VS Code Settings UI (`Ctrl+,`) and searching for the extension's name ("Commit Message Generator").
+
+---
+
+## 7. Adopting Conventional Commits
+
+A key decision was made to standardize the output commit messages using the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification.
+
+- **Why:** This provides a structured format that is easier for humans to read and allows for automated tools (like changelog generators or semantic versioning).
+- **Implementation:** The prompt sent to the Gemini API (`src/extension.ts`) was specifically crafted to instruct the model to generate messages following this format (e.g., starting with `feat:`, `fix:`, `docs:`, etc.).
